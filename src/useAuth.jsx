@@ -8,12 +8,12 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("http://localhost:3001/login", {
-        code,
-      })
-      // .post("https://irvanmusik.vercel.app/login", {
+      // .post("http://localhost:3001/login", {
       //   code,
       // })
+      .post("https://irvanmusik.vercel.app/login", {
+        code,
+      })
       .then((res) => {
         setAccessToken(res.data.accessToken);
         setRefreshToken(res.data.refreshToken);
@@ -29,12 +29,12 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return;
     const interval = setInterval(() => {
       axios
-        .post("http://localhost:3001/refresh", {
-          refreshToken,
-        })
-        // .post("https://irvanmusik.vercel.app/refresh", {
+        // .post("http://localhost:3001/refresh", {
         //   refreshToken,
         // })
+        .post("https://irvanmusik.vercel.app/refresh", {
+          refreshToken,
+        })
         .then((res) => {
           setAccessToken(res.data.accessToken);
           setExpiresIn(res.data.expiresIn);

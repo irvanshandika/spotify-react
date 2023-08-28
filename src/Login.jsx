@@ -1,9 +1,9 @@
 import React from "react";
 
-const AUTH_URL =
-  "https://accounts.spotify.com/authorize?client_id=461367ca8ef64d8abd37c9bfd5430cba&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
 // const AUTH_URL =
-//   "https://accounts.spotify.com/authorize?client_id=461367ca8ef64d8abd37c9bfd5430cba&response_type=code&redirect_uri=https://irvanmusik.vercel.app&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
+//   "https://accounts.spotify.com/authorize?client_id=461367ca8ef64d8abd37c9bfd5430cba&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
+const AUTH_URL =
+  "https://accounts.spotify.com/authorize?client_id=461367ca8ef64d8abd37c9bfd5430cba&response_type=code&redirect_uri=https://irvanmusik.vercel.app&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
 export default function Login() {
   return (
     <div className="flex justify-center mt-[300px]">

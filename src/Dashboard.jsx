@@ -27,18 +27,18 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return;
 
     axios
-      .get("http://localhost:3001/lyrics", {
-        params: {
-          track: playingTrack.title,
-          artist: playingTrack.artist,
-        },
-      })
-      // .get("https://irvanmusik.vercel.app/lyrics", {
+      // .get("http://localhost:3001/lyrics", {
       //   params: {
       //     track: playingTrack.title,
       //     artist: playingTrack.artist,
       //   },
       // })
+      .get("https://irvanmusik.vercel.app/lyrics", {
+        params: {
+          track: playingTrack.title,
+          artist: playingTrack.artist,
+        },
+      })
       .then((res) => {
         setLyrics(res.data.lyrics);
       });
@@ -77,7 +77,7 @@ export default function Dashboard({ code }) {
   }, [search, accessToken]);
   return (
     <div className="grid justify-center mt-[20vh]">
-      <ButtonLogout className="mb-4"/>
+      <ButtonLogout className="mb-4" />
       <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
         Search
       </label>
